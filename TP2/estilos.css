@@ -1,0 +1,255 @@
+/* Fuente moderna de Google Fonts (cambia por completo la estética) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff4f7; /* Rosa cálido y limpio */
+    color: #44333b;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(220, 100, 130, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #33222a;
+}
+
+.logo span {
+    color: #e0537f; /* Rosa principal */
+}
+
+nav a {
+    text-decoration: none;
+    color: #6d535f;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e0537f;
+}
+
+/* Sección Hero / Presentación */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #ffffff 0%, #ffe9f0 100%);
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0 8px 25px rgba(220, 100, 130, 0.1);
+    border: 1px solid #ffd6e2;
+    gap: 30px;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.saludo {
+    color: #e0537f;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    color: #2b1a22;
+    margin: 5px 0;
+}
+
+.subtitulo {
+    color: #8c6a78;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+/* Tu foto: centrada, sin cortar la cabeza y con relieve */
+.hero-foto img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top; /* ➜ Mantiene tu rostro centrado */
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(224, 83, 127, 0.25);
+}
+
+/* Botones llamativos y elegantes */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #e0537f, #f0759f);
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(224, 83, 127, 0.3);
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(224, 83, 127, 0.4);
+}
+
+/* Secciones y Tarjetas */
+.seccion {
+    padding: 35px 0;
+}
+
+.seccion h2 {
+    color: #e0537f;
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.seccion h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e0537f;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+.tarjeta, .contacto-caja {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(220, 100, 130, 0.07);
+    border: 1px solid #ffe1eb;
+}
+
+/* Grilla de habilidades */
+.grilla-habilidades {
+    display: flex;
+    gap: 20px;
+}
+
+.tarjeta-corta {
+    flex: 1;
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid #ffe1eb;
+    box-shadow: 0 6px 20px rgba(220, 100, 130, 0.07);
+    transition: transform 0.3s;
+}
+
+.tarjeta-corta:hover {
+    transform: translateY(-4px);
+    border-color: #f7a8c1;
+}
+
+.tarjeta-corta h3 {
+    color: #e0537f;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Formulario */
+.formulario {
+    margin-top: 15px;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #553e48;
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 5px;
+    border: 1px solid #f0ccd7;
+    border-radius: 10px;
+    background: #fffbfe;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.formulario input:focus, .formulario textarea:focus {
+    border-color: #e0537f;
+    box-shadow: 0 0 0 3px rgba(224, 83, 127, 0.15);
+    background: #ffffff;
+}
+
+/* Pie de página */
+footer {
+    background: #ffffff;
+    border-top: 1px solid #ffd6e2;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    color: #8c6a78;
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   RESPONSIVE (CELULARES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header .contenedor {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .grilla-habilidades {
+        flex-direction: column;
+    }
+}

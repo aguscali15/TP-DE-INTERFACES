@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hattogu Jujuy - Panchos Coreanos Artesanales</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- 1. HEADER -->
+    <header>
+        <div class="contenedor header-flex">
+            <a href="#inicio" class="logo">
+                <img src="LOGO.png" alt="Logo Hattogu" class="logo-img">
+                <span>Hattogu</span> Jujuy
+            </a>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#menu">Menú</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#testimonios">Opiniones</a>
+                <a href="#contacto">Pedidos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. HERO -->
+        <section id="inicio" class="hero">
+            <div class="contenedor">
+                <h2>Street Food Coreano en San Salvador de Jujuy</h2>
+                <p>Crujientes por fuera, con abundante queso derretido por dentro y las mejores salsas caseras.</p>
+                <a href="#menu" class="btn">Ver nuestro menú</a>
+            </div>
+        </section>
+
+        <!-- 3. MENU  -->
+        <section id="menu" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Nuestros Hattogus</h2>
+                <div class="grid-productos">
+                    <!-- Plato 1 -->
+                    <article class="tarjeta-producto">
+                        <img src="COMIDA1.png" alt="Gamja Hattogu Clásico" class="tarjeta-img">
+                        <h3>Gamja Hattogu</h3>
+                        <p>Cubierto con crocantes cubos de papa frita dorada, queso mozzarella y aderezos especiales.</p>
+                    </article>
+
+                    <!-- Plato 2 -->
+                    <article class="tarjeta-producto">
+                        <img src="COMIDA2.png" alt="Hattogu Cheddar y Verdeo" class="tarjeta-img">
+                        <h3>Cheddar & Verdeo</h3>
+                        <p>Bañado en abundante queso cheddar fundido caliente, verdeo fresco picado y cebolla morada.</p>
+                    </article>
+
+                    <!-- Plato 3 -->
+                    <article class="tarjeta-producto">
+                        <img src="COMIDA3.png" alt="Hattogu Doble Salsa" class="tarjeta-img">
+                        <h3>Especial Doble Salsa</h3>
+                        <p>Combinación de salsa dulce y picante suave de la casa, crema tártara y trocitos de jamón.</p>
+                    </article>
+
+                    <!-- Plato 4 -->
+                    <article class="tarjeta-producto">
+                        <img src="COMIDA4.png" alt="Full Mozzarella" class="tarjeta-img">
+                        <h3>Full Mozzarella Dorado</h3>
+                        <p>100% puro queso mozzarella que estira un montón, con doble rebozado crujiente y papas.</p>
+                    </article>
+
+                    <!-- Plato 5 -->
+                    <article class="tarjeta-producto">
+                        <img src="COMIDA5.png" alt="Bebidas Coreanas Importadas" class="tarjeta-img">
+                        <h3>Bebidas Asiáticas</h3>
+                        <p>Para acompañar: Milkis de banana, Sac Sac con trocitos de fruta (uva y coco) y gaseosas importadas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. NOSOTROS -->
+        <section id="nosotros" class="seccion fondo-crema">
+            <div class="contenedor nosotros-flex">
+                <div class="nosotros-texto">
+                    <h2 class="titulo-izq">Sobre Hattogu</h2>
+                    <p>
+                        Traemos la auténtica experiencia del street food coreano a Jujuy. Cada pancho se elabora y fríe en el momento con ingredientes frescos, queso de primera calidad y salsas artesanales para lograr el punto justo de crocancia.
+                    </p>
+                    <p>
+                        ¡Vení a probar una propuesta distinta, rica y divertida en el centro de San Salvador!
+                    </p>
+                </div>
+                <div class="nosotros-datos">
+                    <div class="caja-dato">
+                        <strong>100%</strong>
+                        <span>Hecho en el momento</span>
+                    </div>
+                    <div class="caja-dato">
+                        <strong>+5</strong>
+                        <span>Salsas exclusivas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TESTIMONIOS-->
+        <section id="testimonios" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Lo que dicen nuestros clientes</h2>
+                <div class="grid-testimonios">
+                    <article class="tarjeta-testimonio">
+                        <p>"El Gamja con papas es de otro planeta. El queso estira un montón y no son nada grasosos. Súper recomendado."</p>
+                        <h4>— Camila R. (Jujuy)</h4>
+                    </article>
+                    <article class="tarjeta-testimonio">
+                        <p>"Excelente atención y comida distinta en el centro. El toque de verdeo y cheddar arriba le queda genial."</p>
+                        <h4>— Franco V. (Jujuy)</h4>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTACTO / PEDIDOS -->
+        <section id="contacto" class="seccion fondo-crema">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">Hacé tu Pedido o Consulta</h2>
+                <form class="formulario">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="telefono">WhatsApp / Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="388 000-0000" required>
+
+                    <label for="pedido">Detalle de tu pedido:</label>
+                    <textarea id="pedido" name="pedido" rows="3" placeholder="Ej: 2 Gamja Hattogu y 1 Milkis para retirar..." required></textarea>
+
+                    <button type="submit" class="btn btn-bloque">Enviar Pedido 🌭</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. FOOTER -->
+    <footer>
+        <div class="contenedor footer-flex">
+            <p>&copy; 2026 <strong>Hattogu Jujuy</strong> · @hattogu_jujuy</p>
+            <div class="redes">
+                <a href="#">Instagram</a> · <a href="#">WhatsApp</a> · <a href="#">TikTok</a>
+            </div>
+            <p class="sub-pie">Diseño de Interface - 3° Año - IES N° 11 | Alumna: Agustina Calizaya</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #12131c; /* Fondo general oscuro */
+    color: #e2e8f0;
+    padding-top: 65px; /* Espacio para el navbar fijo */
+}
+
+/* Colores de fondo para alternar secciones */
+.bg-oscuro {
+    background-color: #1a1b26 !important;
+}
+
+.bg-bloque {
+    background-color: #171824;
+}
+
+/* Logo en el navbar */
+.logo-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Botón amarillo destacado */
+.btn-amarillo {
+    background-color: #eab308;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+}
+
+.btn-amarillo:hover {
+    background-color: #ca8a04;
+    color: #000;
+}
+
+/* Hero con video de fondo */
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #2d2e42;
+    padding: 70px 0;
+}
+
+.video-fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 19, 28, 0.7); /* Oscurece el video para que el texto resalte */
+    z-index: 2;
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-contenido p {
+    max-width: 580px;
+}
+
+/* Forzar que las tarjetas sean oscuras (anula el blanco por defecto de Bootstrap) */
+.card, .tarjeta-juego, .tarjeta-paso {
+    background-color: #1a1b26 !important;
+    border: 1px solid #2d2e42 !important;
+    border-radius: 10px;
+}
+
+/* Textos legibles dentro de las tarjetas */
+.tarjeta-juego p {
+    color: #cbd5e1 !important;
+    margin-top: 8px;
+}
+
+.tarjeta-juego ul {
+    color: #94a3b8 !important;
+    padding-left: 18px;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.texto-descripcion {
+    color: #cbd5e1 !important;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.icono {
+    font-size: 32px;
+}

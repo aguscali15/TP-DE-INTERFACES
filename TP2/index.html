@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Agustina Calizaya</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado con logo y menú -->
+    <header>
+        <div class="contenedor">
+            <h1 class="logo">Agus <span>Calizaya</span></h1>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contenedor">
+
+        <!-- Sección 1: Presentación / Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero-texto">
+                <p class="saludo">¡Hola! Soy</p>
+                <h2>Agustina Calizaya</h2>
+                <p class="subtitulo">Estudiante de Desarrollo de Software (IES N° 11)</p>
+                <p>Me apasiona el diseño de interfaces limpias, accesibles y la atención a las personas.</p>
+                <a href="#contacto" class="btn">Escribirme</a>
+            </div>
+          <div class="hero-foto">
+                <!-- Si está dentro de la carpeta 'imagenes': -->
+                <img src="perfil.png" alt="Foto de perfil de Agustina Calizaya">
+                <!-- Nota: Si tu imagen es .png, cámbiale la extensión a imagenes/perfil.png.
+                     Si la pusiste suelta junto al index.html, usa src="perfil.jpg" -->
+            </div>
+        </section>
+
+        <!-- Sección 2: Sobre mí -->
+        <section id="sobre-mi" class="seccion">
+            <h2>Sobre mí</h2>
+            <div class="tarjeta">
+                <p>
+                    Vivo en San Salvador de Jujuy y actualmente curso el 3° año de la <strong>Tecnicatura Superior en Desarrollo de Software</strong> en el Instituto de Educación Superior N° 11.
+                </p>
+                <p>
+                    Cuento con experiencia laboral en <strong>atención al público y mostrador</strong> (en Despensa Antolito y Restaurante Maná), lo que me ayudó a desarrollar responsabilidad, organización y empatía para trabajar en equipo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Habilidades y Formación -->
+        <section id="habilidades" class="seccion">
+            <h2>Habilidades y Formación</h2>
+            <div class="grilla-habilidades">
+                <article class="tarjeta-corta">
+                    <h3>💻 Desarrollo Web</h3>
+                    <p>Estructuras con HTML5 semántico, maquetado con CSS3 y diseño de interfaces.</p>
+                </article>
+
+                <article class="tarjeta-corta">
+                    <h3>📑 Administración</h3>
+                    <p>Cursos de Secretariado Informático (Punto Digital) y Gestión Contable/Bancaria (Balcarce).</p>
+                </article>
+
+                <article class="tarjeta-corta">
+                    <h3>🌸 Trato con Personas</h3>
+                    <p>Comunicación clara, predisposición cordial, paciencia y resolución de dudas.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección 4: Contacto con formulario simple -->
+        <section id="contacto" class="seccion">
+            <h2>Contacto</h2>
+            <div class="contacto-caja">
+                <p><strong>Email:</strong> aguscalizaya85@gmail.com | <strong>Tel:</strong> 388 506-6947</p>
+                <p>San Salvador de Jujuy - Barrio Moreno</p>
+
+                <form class="formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje..."></textarea>
+
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Agustina Calizaya - Diseño de Interface - IES N° 11</p>
+    </footer>
+
+</body>
+</html>
