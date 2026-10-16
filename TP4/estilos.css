@@ -19,7 +19,7 @@ body {
     background-color: #171824;
 }
 
-/* Logo en el navbar */
+/* Logo */
 .logo-img {
     width: 38px;
     height: 38px;
@@ -93,7 +93,7 @@ body {
     border-radius: 10px;
 }
 
-/* Textos legibles dentro de las tarjetas */
+/* Textos dentro de las tarjetas */
 .tarjeta-juego p {
     color: #cbd5e1 !important;
     margin-top: 8px;

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos Jujuy - Panel de Control</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="d-flex layout-panel">
+
+        <!-- 1. SIDEBAR (5 secciones con estilo moderno) -->
+        <aside class="sidebar p-3 text-white">
+            <div class="marca-sidebar px-2 mb-4 d-flex align-items-center gap-2">
+                <div class="icono-marca">⚡</div>
+                <div>
+                    <h5 class="fw-bold mb-0">TorneosJujuy</h5>
+                    <span class="sub-marca">Panel de Gestión</span>
+                </div>
+            </div>
+
+            <nav class="nav nav-pills flex-column gap-2">
+                <a href="#" class="nav-link active">📊 Resumen</a>
+                <a href="#" class="nav-link">🏆 Torneos Activos</a>
+                <a href="#" class="nav-link">👥 Squads & Tríos</a>
+                <a href="#" class="nav-link">🎮 Salas & Horarios</a>
+                <a href="#" class="nav-link">⚙️ Configuración</a>
+            </nav>
+
+            <div class="perfil-admin mt-auto pt-3 border-top border-secondary-subtle d-flex align-items-center gap-2">
+                <div class="avatar-admin">AC</div>
+                <div>
+                    <p class="mb-0 fw-bold small text-white">Agus Calizaya</p>
+                    <small class="text-secondary">Organizadora</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 2. CONTENIDO PRINCIPAL -->
+        <main class="contenido-principal flex-grow-1 p-4">
+
+            <!-- Barra superior -->
+            <header class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <div>
+                    <h3 class="fw-bold mb-1 titulo-principal">Panel General</h3>
+                    <p class="text-muted mb-0 small">Control de inscripciones, recaudación y partidas semanales</p>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <span class="badge-temporada">Edición Primavera 2026</span>
+                </div>
+            </header>
+
+            <!-- 3. TARJETAS DE MÉTRICAS (4 métricas con vida e iconos de color) -->
+            <section class="row g-3 mb-4">
+                <!-- Métrica 1 -->
+                <div class="col-sm-6 col-xl-3">
+                    <div class="tarjeta-metrica">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="metrica-label">Squads Anotados</span>
+                            <div class="burbuja-icono lila">👥</div>
+                        </div>
+                        <h2 class="metrica-valor">48</h2>
+                        <span class="metrica-cambio positivo">↑ +14 esta semana</span>
+                    </div>
+                </div>
+
+                <!-- Métrica 2 -->
+                <div class="col-sm-6 col-xl-3">
+                    <div class="tarjeta-metrica">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="metrica-label">Premios a Repartir</span>
+                            <div class="burbuja-icono verde">💵</div>
+                        </div>
+                        <h2 class="metrica-valor">$120.000</h2>
+                        <span class="metrica-sub">Pozo para finales</span>
+                    </div>
+                </div>
+
+                <!-- Métrica 3 -->
+                <div class="col-sm-6 col-xl-3">
+                    <div class="tarjeta-metrica">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="metrica-label">Partidas Jugadas</span>
+                            <div class="burbuja-icono naranja">🔥</div>
+                        </div>
+                        <h2 class="metrica-valor">36</h2>
+                        <span class="metrica-sub">8 programadas hoy</span>
+                    </div>
+                </div>
+
+                <!-- Métrica 4 -->
+                <div class="col-sm-6 col-xl-3">
+                    <div class="tarjeta-metrica">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="metrica-label">Jugadores Totales</span>
+                            <div class="burbuja-icono celeste">🎮</div>
+                        </div>
+                        <h2 class="metrica-valor">192</h2>
+                        <span class="metrica-sub">Free Fire y Brawl Stars</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. GRÁFICO DINÁMICO (Chart.js) -->
+            <section class="tarjeta-blanca p-4 mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">Evolución de Equipos Inscriptos</h5>
+                    <small class="text-muted">Comparativa por semana</small>
+                </div>
+                <div class="contenedor-canvas">
+                    <canvas id="graficoTorneos"></canvas>
+                </div>
+            </section>
+
+            <!-- 5. TABLA DE REGISTROS (Con avatares de color y badges píldora) -->
+            <section class="tarjeta-blanca p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">Últimos Equipos Confirmados</h5>
+                    <span class="text-muted small">5 registros recientes</span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table tabla-moderna align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>EQUIPO</th>
+                                <th>JUEGO</th>
+                                <th>MODALIDAD</th>
+                                <th>FECHA</th>
+                                <th>ESTADO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="avatar-equipo bg-ff">LC</span>
+                                        <div>
+                                            <strong class="d-block text-dark">Los Capos FF</strong>
+                                            <small class="text-muted">Capitán: Kevin_Jujuy</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="pill-juego ff">Free Fire</span></td>
+                                <td>Squad 4v4</td>
+                                <td>10/10/2026</td>
+                                <td><span class="badge-estado listo">Confirmado</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="avatar-equipo bg-bs">TS</span>
+                                        <div>
+                                            <strong class="d-block text-dark">Team Star</strong>
+                                            <small class="text-muted">Capitán: Mati_Brawl</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="pill-juego bs">Brawl Stars</span></td>
+                                <td>Tríos 3v3</td>
+                                <td>11/10/2026</td>
+                                <td><span class="badge-estado listo">Confirmado</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="avatar-equipo bg-ff2">FJ</span>
+                                        <div>
+                                            <strong class="d-block text-dark">Furia Jujeña</strong>
+                                            <small class="text-muted">Capitán: NicoGamer</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="pill-juego ff">Free Fire</span></td>
+                                <td>Squad 4v4</td>
+                                <td>11/10/2026</td>
+                                <td><span class="badge-estado espera">Falta Comprobante</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="avatar-equipo bg-bs2">BN</span>
+                                        <div>
+                                            <strong class="d-block text-dark">Brawlers del Norte</strong>
+                                            <small class="text-muted">Capitán: Lucas_07</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="pill-juego bs">Brawl Stars</span></td>
+                                <td>Tríos 3v3</td>
+                                <td>12/10/2026</td>
+                                <td><span class="badge-estado listo">Confirmado</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="avatar-equipo bg-ff">LB</span>
+                                        <div>
+                                            <strong class="d-block text-dark">La Banda 4v4</strong>
+                                            <small class="text-muted">Capitán: Agus_Sniper</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="pill-juego ff">Free Fire</span></td>
+                                <td>Squad 4v4</td>
+                                <td>13/10/2026</td>
+                                <td><span class="badge-estado revision">Revisando Suplente</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Script del gráfico con curvas suaves y colores vivos -->
+    <script>
+        const ctx = document.getElementById('graficoTorneos').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+                datasets: [
+                    {
+                        label: 'Free Fire (Squads)',
+                        data: [10, 18, 28, 48],
+                        borderColor: '#7c3aed', /* Púrpura eléctrico */
+                        backgroundColor: 'rgba(124, 58, 237, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true,
+                        pointBackgroundColor: '#7c3aed',
+                        pointRadius: 5
+                    },
+                    {
+                        label: 'Brawl Stars (Tríos)',
+                        data: [6, 12, 22, 34],
+                        borderColor: '#06b6d4', /* Celeste cian vivo */
+                        backgroundColor: 'rgba(6, 182, 212, 0.08)',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true,
+                        pointBackgroundColor: '#06b6d4',
+                        pointRadius: 5
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { boxWidth: 12, font: { weight: '600' } }
+                    }
+                },
+                scales: {
+                    x: { grid: { display: false } },
+                    y: { grid: { color: '#f1f5f9' }, beginAtZero: true }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
